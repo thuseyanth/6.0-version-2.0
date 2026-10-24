@@ -2,328 +2,537 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>BOSS Chemicals | Smart Chemistry for a Cleaner Future</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shri's Art & Culture | Authentic Handmade Terracotta</title>
+  <meta name="description" content="Shop authentic handmade terracotta horses, Ganesha idols, Nandi statues, animal planters, traditional Tamil clay jewellery and home decor from Tiruchirappalli, Tamil Nadu.">
+  <link rel="icon" type="image/png" href="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
 </head>
 <body>
 
-<!-- Premium Loading Animation -->
-<div id="preloader">
-  <div class="loader-container">
-    <div class="atom-loader">
-      <div class="nucleus"></div>
-      <div class="electron e1"></div>
-      <div class="electron e2"></div>
-      <div class="electron e3"></div>
-    </div>
-    <div class="loader-logo-icon">B</div>
-    <p class="loader-text">BOSS Chemicals</p>
-    <p class="loader-sub">Smart Chemistry for a Cleaner Future</p>
-  </div>
-</div>
-
-<div class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <div class="logo-icon-wrapper">
-        <div class="logo-icon">B</div>
-        <div class="logo-glow"></div>
+  <!-- ================= TOP ANNOUNCEMENT & BILINGUAL BAR ================= -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="announcement-text">
+        <span class="badge">Handmade</span>
+        <span data-i18n="announcement">Handmade with care • Pan-India delivery options • WhatsApp for custom orders</span>
       </div>
-      <div>
-        <div class="logo-brand">
-          <span class="logo-text">BOSS</span>
-          <span class="logo-slogan"><i class="fas fa-leaf"></i> cleaner future</span>
+      <div class="top-bar-actions">
+        <a href="tel:+918072301783" class="quick-contact-link">📞 +91 8072301783</a>
+        <div class="lang-selector" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang="en" onclick="setlanguage('en')">English</button>
+          <button class="lang-btn" data-lang="ta" onclick="setlanguage('ta')">தமிழ்</button>
         </div>
-        <div class="logo-tagline">Smart Chemistry</div>
       </div>
     </div>
-    <div class="nav-links">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#products" class="nav-link">Chemicals</a>
-      <a href="#solutions" class="nav-link">Solutions</a>
-      <a href="#contact" class="nav-link">Connect</a>
-    </div>
-    <div class="mobile-menu" id="mobileMenuIcon">
-      <i class="fas fa-bars"></i>
-    </div>
   </div>
-</div>
 
-<main>
-  <!-- Hero Section with Background Video -->
-  <section id="home" class="hero">
-    <!-- Background Video -->
-    <video class="hero-video-bg" autoplay loop muted playsinline poster="https://placehold.co/1920x1080/004e7c/ffffff?text=Loading+Video...">
-      <source src="assets/Untitled design.mp4" type="video/mp4">
-      <!-- Fallback gradient if video fails -->
-    </video>
-    <div class="hero-video-overlay"></div>
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html" aria-label="Shri's Art and Culture home">
+        <img class="brand-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <div class="brand-text">
+          <strong>Shri's Art &amp; Culture</strong>
+          <small data-i18n="brandSubtitle">Handmade Terracotta Products</small>
+        </div>
+      </a>
+
+      <!-- Search Input -->
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input id="header-search-input" name="q" type="search" placeholder="Search horses, planters, idols, diyas..." aria-label="Search products" autocomplete="off">
+      </div>
+
+      <!-- Navigation & Cart Trigger -->
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active" data-i18n="home">Home</a>
+        <a href="products.html" class="nav-link" data-i18n="shop">Shop Collection</a>
+        <a href="#about" class="nav-link" data-i18n="ourStoryBtn">Our Story</a>
+        <a href="#services" class="nav-link">Services</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button-trigger" onclick="openCartDrawer()" aria-label="View Shopping Cart">
+          <span>🛒</span>
+          <span data-i18n="cart">Cart</span>
+          <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="heritageEyebrow">தமிழர் மரபு • TAMIL HERITAGE</span>
+          <h1 data-i18n="heroTitle">Bring handmade tradition into your home.</h1>
+          <p data-i18n="heroDesc">
+            Discover terracotta horses, sacred idols, artisan planters, ethnic jewellery and thoughtful decor crafted with pure river clay by Shri's Art &amp; Culture artisans in Tiruchirappalli.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#featured" data-i18n="shopCollectionBtn">Shop Our Collection →</a>
+            <a class="btn btn-outline" href="#about" data-i18n="ourStoryBtn">Our Story</a>
+          </div>
+          <div class="hero-microcopy">
+            <span>✦</span> Unique handmade pieces <span>✦</span> Safe packaging <span>✦</span> Custom enquiries welcome
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-featured">
+            <div class="hero-image-wrapper">
+              <img src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792574662567_dda24ec1.jpg" alt="Handcrafted Puppy Terracotta Planters" id="hero-showcase-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800';">
+            </div>
+            <div class="floating-badge">
+              <div class="icon-circle">🪴</div>
+              <div>
+                <small>Eco-Friendly Living</small>
+                <strong>Handmade in Tiruchirappalli</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST & VALUE ROW ================= -->
+    <section class="trust-strip">
+      <div class="trust-container">
+        <div class="trust-item">
+          <div class="trust-icon">✦</div>
+          <div class="trust-text">
+            <strong data-i18n="heroBadge1">Handmade Craft</strong>
+            <small data-i18n="heroBadge1Sub">Each piece is individually sculpted by traditional artisans</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">♧</div>
+          <div class="trust-text">
+            <strong data-i18n="heroBadge2">Traditional Style</strong>
+            <small data-i18n="heroBadge2Sub">Rooted in centuries of Tamil art & temple architecture</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🌿</div>
+          <div class="trust-text">
+            <strong data-i18n="heroBadge3">Eco-Friendly & Sustainable</strong>
+            <small data-i18n="heroBadge3Sub">100% natural, chemical-free baked earth</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">📦</div>
+          <div class="trust-text">
+            <strong>Safe Pan-India Shipping</strong>
+            <small>Triple-layer protective packaging for fragile terracotta</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS SECTION ================= -->
+    <section class="section" id="featured">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow" data-i18n="allCategories">SHOP THE COLLECTION</span>
+            <h2 class="section-title" data-i18n="featuredTitle">Featured Handcrafted Products</h2>
+            <p class="section-subtitle" data-i18n="featuredSub">Hand-picked artisan crafts ready to grace your living spaces</p>
+          </div>
+
+          <!-- Category filter tabs -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-category="all" data-i18n="allCategories">All</button>
+            <button class="filter-btn" data-category="idols" data-i18n="catIdols">Idols & Horses</button>
+            <button class="filter-btn" data-category="planters" data-i18n="catPlanters">Planters</button>
+            <button class="filter-btn" data-category="jewellery" data-i18n="catJewellery">Jewellery</button>
+            <button class="filter-btn" data-category="decor" data-i18n="catDecor">Home Decor</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid rendered by js/app.js -->
+        <div class="product-grid" id="products-grid-container">
+          <!-- Products inserted via JavaScript -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="products.html" class="btn btn-outline" style="min-width: 220px;" data-i18n="viewAll">Explore All Collections →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HERITAGE STORY SECTION ================= -->
+    <section class="section heritage-story-section" id="about">
+      <div class="section-container">
+        <div class="heritage-grid">
+          <div class="heritage-content">
+            <span class="eyebrow">OUR CULTURAL HERITAGE</span>
+            <h2>Shri's Art &amp; Culture</h2>
+            <blockquote class="tamil-quote">
+              "மண்ணின் மணம், தமிழின் பெருமை – கலை மரபின் அழகிய வெளிப்பாடு"
+            </blockquote>
+            <p>
+              Terracotta products are a timeless symbol of Tamil culture, carrying the essence of tradition, craftsmanship, and heritage through generations. Handmade with natural clay gathered from riverbeds, each piece reflects the artistic excellence of our Tamil artisans and the enduring beauty of our cultural roots.
+            </p>
+            <p>
+              From sacred temple horses and idols to delicate wearable clay jewellery and animal planters, terracotta creations blend eco-friendly living with authentic traditional charm. Owning a terracotta product is a celebration of Tamil identity, art, and history.
+            </p>
+            <div class="notice-box">
+              <span>⚠️</span>
+              <span><strong>Note:</strong> Product availability, custom sizing, delivery timelines, and special packaging charges can be confirmed with our artisan desk before dispatch.</span>
+            </div>
+            <div style="margin-top: 2rem;">
+              <a href="https://wa.me/918072301783?text=Hello%20Shri's%20Art%20and%20Culture,%20I%20would%20like%20to%20enquire%20about%20custom%20terracotta%20designs" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <span>💬</span> WhatsApp for Custom Enquiries
+              </a>
+            </div>
+          </div>
+
+          <div class="heritage-images-composite">
+            <div class="heritage-img-card">
+              <img src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792503306495_92659e31.jpg" alt="Sacred Terracotta Ganesha Art" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1567591414240-e740cfdb39cf?w=600';">
+            </div>
+            <div class="heritage-img-card offset">
+              <img src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792503318525_5d4b77a9.jpg" alt="Traditional Nandi Terracotta Sculpture" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600';">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES OFFERED ================= -->
+    <section class="section services-section" id="services">
+      <div class="section-container">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div>
+            <span class="eyebrow">WHAT WE CRAFT</span>
+            <h2 class="section-title">Artisan Services & Specialities</h2>
+            <p class="section-subtitle">From custom temple replicas to bulk corporate gifting, crafted with love</p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🏺</div>
+            <h3>Handmade Terracotta Products</h3>
+            <p>Sculpted purely with natural clay, kiln-baked to perfection following age-old Tamil techniques.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Customized Home Décor</h3>
+            <p>Tailored sizes, personalized themes, and bespoke clay sculptures to match modern and traditional interiors.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎁</div>
+            <h3>Personalized Gift Collections</h3>
+            <p>Meaningful, eco-friendly wedding favors, housewarming gifts, and memorable cultural souvenirs.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🪔</div>
+            <h3>Festive & Cultural Decorations</h3>
+            <p>Special edition Karthigai Deepam diyas, Navratri golu terracotta sets, and temple offerings.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🪴</div>
+            <h3>Indoor & Outdoor Garden Décor</h3>
+            <p>Breathable natural clay animal planters, bird baths, and water fountains for lush greenery.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📦</div>
+            <h3>Bulk Orders & Safe Delivery</h3>
+            <p>Special wholesale rates for event planners, temple trusts, and businesses with safe pan-India delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img class="footer-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <h4>Shri's Art &amp; Culture</h4>
+        <p>Celebrating Tamil craft heritage through handmade terracotta pottery, sacred figurines, and sustainable lifestyle decor.</p>
+        <p style="color: var(--terracotta-400); font-size: 0.85rem;">
+          📧 <strong>Orders &amp; Notifications:</strong> shri67ram890@gmail.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="quickLinks">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="products.html" data-i18n="shop">Shop All Collections</a></li>
+          <li><a href="#about" data-i18n="ourStoryBtn">Our Story & Heritage</a></li>
+          <li><a href="#services">Artisan Services</a></li>
+          <li><a href="checkout.html">Checkout & Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Our Craft</h5>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="renderProductsGrid('idols'); location.href='#featured';">Terracotta Horses & Idols</a></li>
+          <li><a href="javascript:void(0)" onclick="renderProductsGrid('planters'); location.href='#featured';">Animal Planters (Dog / Cute)</a></li>
+          <li><a href="javascript:void(0)" onclick="renderProductsGrid('jewellery'); location.href='#featured';">Temple Clay Jewellery</a></li>
+          <li><a href="javascript:void(0)" onclick="renderProductsGrid('decor'); location.href='#featured';">Home Decor & Diyas</a></li>
+          <li><a href="https://wa.me/918072301783?text=Bulk%20Order%20Enquiry" target="_blank" rel="noopener">Bulk Order Enquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="contactLocation">Contact & Location</h5>
+        <div class="footer-contact-list">
+          <span>📍 <strong>Address:</strong> 5 PNB Colony, Bikshandarkovil, No 1 Tollgate</span>
+          <span>🏛️ <strong>City:</strong> Tiruchirappalli, Tamil Nadu - 621216</span>
+          <span>📞 <strong>Phone:</strong> +91 8072301783, +91 9944918875</span>
+          <span>📸 <strong>Instagram:</strong> @shri's_art_culture, @_itz_me_fcl</span>
+          <span>✉️ <strong>Email:</strong> shri67ram890@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Shri's Art &amp; Culture. All rights reserved. Crafted with care for Tamil traditional heritage.</p>
+      <p>Pan-India Delivery Options • Direct Artisan WhatsApp Support</p>
+    </div>
+  </footer>
+
+  <!-- ================= CART SLIDE-OVER DRAWER ================= -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title"><span>🏺</span> <span data-i18n="cartTitle">Your Shopping Cart</span></h3>
+      <button class="drawer-close-btn" onclick="closeCartDrawer()" aria-label="Close cart">✕</button>
+    </div>
     
-    <div class="floating-bg-elements">
-      <div class="float-circle"></div>
-      <div class="float-circle2"></div>
-      <div class="float-dot"></div>
-      <div class="float-molecule"></div>
+    <div class="cart-drawer-body" id="cart-drawer-items">
+      <!-- Injected by js/app.js -->
     </div>
-    <div class="container hero-grid">
-      <div class="hero-content fade-up">
-        <span class="hero-badge"><i class="fas fa-droplet"></i> Your Trusted Partner in Chemical Solutions</span>
-        <h1>Smart Chemistry <br>for a <span class="hero-highlight">Cleaner Future</span></h1>
-        <p>More than a chemical manufacturer — we transform industrial challenges into opportunities through advanced chemistry, engineered processes and dedicated service.</p>
-        <div class="hero-buttons">
-          <button class="btn-primary glow-on-hover" id="discoverBtn">Explore solutions <i class="fas fa-arrow-right"></i></button>
-          <button class="btn-outline" id="contactScrollBtn">Talk to expert</button>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-number counter" data-target="15">0</span><span>+</span><br>Years of trust</div>
-          <div class="stat"><span class="stat-number counter" data-target="1000">0</span><span>+</span><br>Clients served</div>
-          <div class="stat"><span class="stat-number counter" data-target="100">0</span><span>%</span><br>Client satisfaction</div>
-        </div>
-      </div>
-      <div class="hero-video-card fade-up delay-2">
-        <div class="video-card-container">
-          <video class="hero-feature-video" autoplay loop muted playsinline>
-            <source src="assets/vid 1.mp4" type="video/mp4">
-          </video>
-          <div class="video-card-overlay"></div>
-          <div class="video-badge"><i class="fas fa-play-circle"></i> Advanced Chemical Processing</div>
-          <div class="video-shine"></div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll to explore</span>
-      <div class="mouse"></div>
-    </div>
-  </section>
 
-  <!-- Core Products Section -->
-  <section id="products" class="products-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Core industrial & water treatment chemicals</h2>
-        <p class="section-subhead">High-purity descaling agents, antiscalants, coagulants, bioculture & defoamers — engineered for performance and sustainability.</p>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div id="cart-drawer-totals">
+        <!-- Injected by js/app.js -->
       </div>
-      <div class="products-grid">
-        <div class="product-card fade-up stagger-1" data-tilt>
-          <div class="card-icon"><i class="fas fa-tint"></i></div>
-          <h3>Antiscalants</h3>
-          <p>RO Antiscalant Tablets (Imported) & Evaporator Antiscalant – prevents scaling, extends membrane life.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Minimizes membrane fouling</li>
-            <li><i class="fas fa-check-circle"></i> Reduces cleaning frequency</li>
-          </ul>
-          <div class="card-shine"></div>
-        </div>
-        <div class="product-card fade-up stagger-2" data-tilt>
-          <div class="card-icon"><i class="fas fa-fire-extinguisher"></i></div>
-          <h3>Descaling Chemicals</h3>
-          <p>Sulfamic Acid (Imported) • RO Descaling • Boiler & Cooling Tower Descaling.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Safe & effective scale removal</li>
-            <li><i class="fas fa-check-circle"></i> Restores heat transfer efficiency</li>
-          </ul>
-          <div class="card-shine"></div>
-        </div>
-        <div class="product-card fade-up stagger-3" data-tilt>
-          <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
-          <h3>Coagulants & Flocculants</h3>
-          <p>Poly Aluminum Chloride (PAC) • Solvent extraction coagulants • Heavy metal coagulants.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Dense, fast-settling flocs</li>
-            <li><i class="fas fa-check-circle"></i> Reduces sludge volume</li>
-          </ul>
-          <div class="card-shine"></div>
-        </div>
-        <div class="product-card fade-up stagger-4" data-tilt>
-          <div class="card-icon"><i class="fas fa-biohazard"></i></div>
-          <h3>Bioculture</h3>
-          <p>Specialized microbial strains for ETP/STP – accelerates organic degradation.</p>
-          <div class="card-shine"></div>
-        </div>
-        <div class="product-card fade-up stagger-5" data-tilt>
-          <div class="card-icon"><i class="fas fa-smog"></i></div>
-          <h3>Defoamers</h3>
-          <p>Silicone & non-silicone variants for wastewater, fermentation & textile.</p>
-          <div class="card-shine"></div>
-        </div>
-        <div class="product-card fade-up stagger-6" data-tilt>
-          <div class="card-icon"><i class="fas fa-swimming-pool"></i></div>
-          <h3>Specialized Chemicals</h3>
-          <p>Textile color removal • Swimming pool chemicals • Deodor chemicals.</p>
-          <div class="card-shine"></div>
-        </div>
+      <div class="cart-actions-column">
+        <button id="cart-drawer-checkout-btn" class="btn btn-primary btn-block" onclick="openCheckoutModal()" data-i18n="checkoutBtn">
+          Proceed to Checkout →
+        </button>
+        <button class="btn btn-outline btn-block btn-sm" onclick="closeCartDrawer()" data-i18n="continueShopping">
+          Continue Browsing
+        </button>
       </div>
     </div>
-  </section>
+  </aside>
 
-  <!-- Plant Solutions Section with Video -->
-  <section id="solutions" class="solutions-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Total plant solutions & spares</h2>
-        <p class="section-subhead">Beyond chemistry — water treatment plants, membranes, spares and turnkey support.</p>
-      </div>
-      <div class="solutions-flex">
-        <div class="solutions-grid">
-          <div class="solution-card fade-up stagger-1">
-            <i class="fas fa-factory"></i>
-            <h3>Water Treatment Plants</h3>
-            <p>ETP, STP, RO, UF, MBR, MEE, ATFD — designed for zero liquid discharge.</p>
-          </div>
-          <div class="solution-card fade-up stagger-2">
-            <i class="fas fa-tower-broadcast"></i>
-            <h3>Cooling Tower Fills & Spares</h3>
-            <p>High-efficiency fills, nozzles, drift eliminators.</p>
-          </div>
-          <div class="solution-card fade-up stagger-3">
-            <i class="fas fa-vial"></i>
-            <h3>Water Testing Kits</h3>
-            <p>Comprehensive on-site analysis for real-time adjustments.</p>
-          </div>
+  <!-- ================= CHECKOUT MODAL (ORDER DISPATCH TO thuseyanth.ats@gmail.com) ================= -->
+  <div class="modal-wrapper" id="checkout-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 data-i18n="checkoutTitle">Place Your Order</h3>
+          <p data-i18n="checkoutSubtitle">Order details will be dispatched immediately to seller (thuseyanth.ats@gmail.com)</p>
         </div>
-        <div class="solutions-video-container fade-up delay-2">
-          <div class="video-card-container small">
-            <video class="solutions-feature-video" autoplay loop muted playsinline>
-              <source src="assets/vid 2.mp4" type="video/mp4">
-            </video>
-            <div class="video-card-overlay"></div>
-            <div class="video-badge"><i class="fas fa-microchip"></i> Industrial RO Systems</div>
-            <div class="video-shine"></div>
-          </div>
-        </div>
+        <button class="modal-close-icon" onclick="closeCheckoutModal()" aria-label="Close modal">✕</button>
       </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container about-flex">
-      <div class="about-text fade-right">
-        <h2 class="section-title">Who we are</h2>
-        <p><strong>Your Trusted Partner in Chemical Solutions</strong> — More than a chemical manufacturer, we transform industrial challenges into opportunities.</p>
-        <p>With us, customers gain superior products, enduring support and high-quality chemical manufacturing adhering to international standards.</p>
-        <div class="trust-badge">
-          <i class="fas fa-award"></i>
-          <p><strong>HIGH QUALITY CHEMICAL MANUFACTURERS</strong><br>Purity, consistency and performance across all product lines.</p>
-        </div>
-        <div class="logo-showcase-about">
-          <div class="about-logo-icon">B</div>
-          <div class="about-logo-info">
-            <strong>BOSS Chemicals</strong>
-            <span>Est. 2008 | Innovation Driven</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-text fade-left">
-        <div class="service-badge">
-          <i class="fas fa-headset"></i>
-          <h3>Total Service Provider</h3>
-          <p>From consultation to ongoing maintenance — single point of contact.</p>
-        </div>
-        <div class="service-badge">
-          <i class="fas fa-industry"></i>
-          <h3>Trusted by Industries</h3>
-          <p>Proven track record of reliability and innovative solutions.</p>
-        </div>
-        <div class="certification-showcase">
-          <div class="cert-item"><i class="fas fa-certificate"></i> ISO 9001:2024</div>
-          <div class="cert-item"><i class="fas fa-certificate"></i> REACH Compliant</div>
-          <div class="cert-item"><i class="fas fa-leaf"></i> EcoVadis Gold</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Connect with BOSS</h2>
-        <p class="section-subhead">For inquiries, detailed product information, or to discuss specific water & industrial treatment needs.</p>
-      </div>
-      <div class="contact-premium fade-up">
-        <div class="contact-grid">
+      <div class="modal-body">
+        <!-- Notice of delivery email -->
+        <div class="notification-recipient-pill">
+          <span>📨</span>
           <div>
-            <form id="bossContactForm">
-              <div class="form-group input-animate">
-                <input type="text" id="name" placeholder="Full name *" required>
-              </div>
-              <div class="form-group input-animate">
-                <input type="email" id="email" placeholder="Business email *" required>
-              </div>
-              <div class="form-group input-animate">
-                <input type="text" id="company" placeholder="Company / Institution">
-              </div>
-              <div class="form-group input-animate">
-                <textarea rows="3" id="message" placeholder="Tell us about your chemical or plant requirements..."></textarea>
-              </div>
-              <button type="submit" class="btn-primary btn-full magnetic-btn">Send inquiry <i class="fas fa-paper-plane"></i></button>
-            </form>
-          </div>
-          <div>
-            <div class="office-card hover-lift">
-              <i class="fas fa-building"></i>
-              <strong>Registered Office (Chennai)</strong>
-              <p>No. 280, Trunk road Srinivasa Nagar, Poonamallee, Chennai 600056</p>
-              <p>📞 +91 95429 56652<br>✉️ sales@bosschemicals.com</p>
-            </div>
-            <div class="office-card hover-lift">
-              <i class="fas fa-map-marker-alt"></i>
-              <strong>Branch Office (Trichy)</strong>
-              <p>5/103, Chennai Trichy Main Road, Lalgudi Taluka, Trichy - 621105</p>
-              <p>📞 +91 63794 86980<br>✉️ gm@bosschemicals.com</p>
-            </div>
-            <div class="office-card hover-lift">
-              <i class="fas fa-chart-line"></i>
-              <strong>Karnataka Office (Bangalore)</strong>
-              <p>Jakkur Layout, Opposite GKVK Road, Bangalore - 560064</p>
-              <p>📞 +91 98404 52703<br>✉️ technical@bosschemicals.com</p>
-            </div>
+            Order and customer details will be securely forwarded directly to <strong>thuseyanth.ats@gmail.com</strong> and our artisan dispatch desk.
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
 
-<footer>
-  <div class="container footer-content">
-    <div class="footer-brand">
-      <div class="footer-logo-wrapper">
-        <div class="footer-logo">B</div>
-      </div>
-      <span class="footer-name">BOSS CHEMICALS</span>
-      <p>Smart Chemistry for a Cleaner Future — comprehensive water & industrial solutions.</p>
-    </div>
-    <div class="footer-links">
-      <h4>Quick links</h4>
-      <a href="#home">Home</a>
-      <a href="#products">Chemicals</a>
-      <a href="#solutions">Plants & Spares</a>
-    </div>
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-x-twitter"></i>
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
+        <!-- Order Summary Box -->
+        <div class="checkout-order-review">
+          <h4><span>Order Items Summary</span> <span id="checkout-total-val">₹0</span></h4>
+          <div class="checkout-items-mini" id="checkout-items-mini">
+            <!-- Injected by js/app.js -->
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; border-top: 1px solid var(--sand-300); padding-top: 0.4rem;">
+            <span>Subtotal: <b id="checkout-subtotal-val">₹0</b></span>
+            <span>Shipping: <b id="checkout-shipping-val">₹0</b></span>
+          </div>
+        </div>
+
+        <!-- Order Form -->
+        <form id="checkout-order-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="customerName"><span data-i18n="fullName">Full Name</span> *</label>
+              <input type="text" id="customerName" name="customerName" required placeholder="e.g. Anandha Kumar">
+            </div>
+
+            <div class="form-group">
+              <label for="customerPhone"><span data-i18n="phone">Mobile Phone Number</span> *</label>
+              <input type="tel" id="customerPhone" name="customerPhone" required placeholder="e.g. 9876543210">
+            </div>
+
+            <div class="form-group">
+              <label for="customerWhatsapp"><span data-i18n="whatsapp">WhatsApp Number</span></label>
+              <input type="tel" id="customerWhatsapp" name="customerWhatsapp" placeholder="e.g. 9876543210 (For photo confirmation)">
+              <small class="help-text">We send packing & dispatch photos on WhatsApp</small>
+            </div>
+
+            <div class="form-group">
+              <label for="customerEmail"><span data-i18n="email">Email Address</span> *</label>
+              <input type="email" id="customerEmail" name="customerEmail" required placeholder="e.g. customer@example.com">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="address"><span data-i18n="address">Delivery Street Address</span> *</label>
+              <textarea id="address" name="address" rows="2" required placeholder="Door no., building, street, landmark..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="city"><span data-i18n="city">City / Town</span> *</label>
+              <input type="text" id="city" name="city" required placeholder="e.g. Tiruchirappalli">
+            </div>
+
+            <div class="form-group">
+              <label for="state"><span data-i18n="state">State</span> *</label>
+              <input type="text" id="state" name="state" required value="Tamil Nadu">
+            </div>
+
+            <div class="form-group">
+              <label for="pincode"><span data-i18n="pincode">PIN Code</span> *</label>
+              <input type="text" id="pincode" name="pincode" required placeholder="e.g. 621216">
+            </div>
+
+            <div class="form-group">
+              <label for="paymentMode"><span data-i18n="paymentMode">Payment & Confirmation Mode</span> *</label>
+              <select id="paymentMode" name="paymentMode" required>
+                <option value="WhatsApp & UPI (GPay/PhonePe)">WhatsApp & UPI (GPay/PhonePe/Paytm - Recommended)</option>
+                <option value="Cash on Delivery (COD)">Cash on Delivery (Subject to PIN verification)</option>
+                <option value="Direct Bank Transfer">Direct Artisan Bank Transfer</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="customNotes"><span data-i18n="notes">Custom Order Notes / Gift Message</span></label>
+              <textarea id="customNotes" name="customNotes" rows="2" placeholder="Any specific clay detailing, gift wrap note, or delivery requests..."></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" id="submit-order-btn" class="btn btn-primary btn-block">
+              <span data-i18n="confirmOrderBtn">Submit Order & Send Details</span> →
+            </button>
+            <p style="text-align: center; font-size: 0.78rem; color: var(--text-light); margin-top: 0.5rem;">
+              Your order confirmation will immediately be transmitted to <strong>thuseyanth.ats@gmail.com</strong>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 BOSS Chemicals. All rights reserved. | Smart Chemistry for a Cleaner Future</p>
+
+  <!-- ================= ORDER SUCCESS & REMINDER / INVOICE MODAL ================= -->
+  <div class="modal-wrapper" id="order-success-modal">
+    <div class="modal-card">
+      <div class="order-success-card">
+        <div class="success-icon-badge">✓</div>
+        <h3 data-i18n="orderSuccessTitle">Order Placed Successfully!</h3>
+        <div class="order-id-tag" id="success-order-id">Order ID: #SAC-89214</div>
+
+        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="orderSuccessMsg">
+          Thank you for supporting traditional Tamil terracotta artisans! We have recorded your order and dispatched full order details to our fulfillment desk.
+        </p>
+
+        <div class="email-dispatched-box" id="success-email-status">
+          <!-- Populated by JS -->
+        </div>
+
+        <div style="background: var(--sand-100); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem; text-align: left;">
+          <h4 style="font-size: 0.95rem; color: var(--terracotta-900); margin-bottom: 0.4rem;">📅 Delivery Tracking & Reminder</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            You can download an automated calendar reminder (.ics) to track your delivery status and remind you when your terracotta shipment arrives.
+          </p>
+          <button class="btn btn-outline btn-sm" onclick="downloadOrderReminder()">
+            📅 <span data-i18n="reminderText">Add Delivery Reminder to Calendar</span>
+          </button>
+        </div>
+
+        <div class="success-action-buttons">
+          <a id="success-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp">
+            <span>💬</span> <span data-i18n="whatsappDirect">Open Order on WhatsApp</span>
+          </a>
+          <button class="btn btn-light" onclick="printOrderInvoice()">
+            <span>🖨️</span> <span data-i18n="downloadInvoice">Print / Save Receipt</span>
+          </button>
+        </div>
+
+        <div style="margin-top: 1rem; font-size: 0.8rem;">
+          <a id="backup-email-trigger" href="#" style="color: var(--terracotta-700); text-decoration: underline;">
+            Send Backup Copy via Email Client to shri67ram890@gmail.com
+          </a>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <button class="btn btn-primary btn-sm" onclick="closeSuccessModal()">Done & Continue Shopping</button>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
 
-<div id="toastMsg" class="toast-msg">✓ Inquiry received — BOSS expert will respond within 12 hours.</div>
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="modal-wrapper" id="quick-view-modal">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem;">Product Details</h3>
+        <button class="modal-close-icon" onclick="closeQuickViewModal()">✕</button>
+      </div>
+      <div class="modal-body" id="quick-view-modal-body">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
 
-<script src="script.js"></script>
+  <!-- ================= FLOATING WHATSAPP CHAT BUTTON ================= -->
+  <a href="https://wa.me/918072301783?text=Hello%20Shri's%20Art%20and%20Culture,%20I%20have%20an%20enquiry%20about%20your%20handmade%20terracotta%20products" class="floating-whatsapp-widget" target="_blank" rel="noopener" aria-label="Chat on WhatsApp with Shri's Art & Culture">
+    💬
+  </a>
+
+  <!-- ================= AI ARTISAN CHATBOT WIDGET (LEFT CORNER CIRCULAR ICON) ================= -->
+  <button class="ai-chat-trigger-btn" onclick="toggleAIChat()" aria-label="Open AI Artisan Assistant">
+    <span>🏺</span>
+    <span class="ai-chat-badge-indicator">AI</span>
+    <span class="ai-chat-tooltip">Ask Artisan AI 🏺</span>
+  </button>
+
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <div class="ai-chat-avatar">🏺</div>
+        <div class="ai-chat-title">
+          <h4>Shri Artisan AI</h4>
+          <small>Online • Terracotta Specialist</small>
+        </div>
+      </div>
+      <button class="ai-chat-close-btn" onclick="closeAIChat()" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="ai-chat-messages" id="ai-chat-messages">
+      <!-- Chat bubbles inserted dynamically -->
+    </div>
+
+    <div class="chat-chips-row" id="ai-chat-chips-row">
+      <!-- Quick chips inserted dynamically -->
+    </div>
+
+    <form class="ai-chat-input-bar" onsubmit="event.preventDefault(); handleChatSubmit();">
+      <input type="text" id="ai-chat-input" placeholder="Ask about products, gifts, care..." autocomplete="off">
+      <button type="submit" class="ai-chat-send-btn" aria-label="Send message">➤</button>
+    </form>
+  </div>
+
 </body>
 </html>
