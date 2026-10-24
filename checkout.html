@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Cart Review | Shri's Art & Culture</title>
+  <link rel="icon" type="image/png" href="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="announcement-text">
+        <span class="badge">Handmade</span>
+        <span data-i18n="announcement">Handmade with care • Pan-India delivery options • WhatsApp for custom orders</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+918072301783" class="quick-contact-link">📞 +91 8072301783</a>
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en" onclick="setlanguage('en')">English</button>
+          <button class="lang-btn" data-lang="ta" onclick="setlanguage('ta')">தமிழ்</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <img class="brand-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <div class="brand-text">
+          <strong>Shri's Art &amp; Culture</strong>
+          <small data-i18n="brandSubtitle">Handmade Terracotta Products</small>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+        <a href="products.html" class="nav-link" data-i18n="shop">Shop Collection</a>
+        <a href="checkout.html" class="nav-link active">Checkout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button-trigger" onclick="openCartDrawer()" aria-label="View Cart">
+          <span>🛒</span>
+          <span data-i18n="cart">Cart</span>
+          <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-container" style="max-width: 960px;">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">ORDER COMPLETION</span>
+          <h1 class="section-title">Review Cart &amp; Complete Order</h1>
+          <p class="section-subtitle">Your order details will be dispatched immediately to <strong>shri67ram890@gmail.com</strong></p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: start;">
+        
+        <!-- Left: Customer & Delivery Details Form -->
+        <div style="background: #ffffff; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.25rem; color: var(--terracotta-900); margin-bottom: 1.25rem;">1. Shipping &amp; Contact Details</h3>
+          
+          <form id="standalone-checkout-form" onsubmit="handleOrderSubmission(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cName">Full Name *</label>
+                <input type="text" id="cName" name="customerName" required placeholder="e.g. Anandha Kumar">
+              </div>
+
+              <div class="form-group">
+                <label for="cPhone">Mobile Phone Number *</label>
+                <input type="tel" id="cPhone" name="customerPhone" required placeholder="e.g. 9876543210">
+              </div>
+
+              <div class="form-group">
+                <label for="cWhatsapp">WhatsApp Number</label>
+                <input type="tel" id="cWhatsapp" name="customerWhatsapp" placeholder="e.g. 9876543210">
+              </div>
+
+              <div class="form-group">
+                <label for="cEmail">Email Address *</label>
+                <input type="email" id="cEmail" name="customerEmail" required placeholder="e.g. yourname@gmail.com">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="cAddress">Complete Delivery Address *</label>
+                <textarea id="cAddress" name="address" rows="3" required placeholder="Door no., Building, Street name, Area landmark..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="cCity">City / Town *</label>
+                <input type="text" id="cCity" name="city" required placeholder="e.g. Tiruchirappalli">
+              </div>
+
+              <div class="form-group">
+                <label for="cState">State *</label>
+                <input type="text" id="cState" name="state" required value="Tamil Nadu">
+              </div>
+
+              <div class="form-group">
+                <label for="cPincode">PIN Code *</label>
+                <input type="text" id="cPincode" name="pincode" required placeholder="e.g. 621216">
+              </div>
+
+              <div class="form-group">
+                <label for="cPayment">Payment Preference *</label>
+                <select id="cPayment" name="paymentMode" required>
+                  <option value="WhatsApp & UPI (GPay/PhonePe)">WhatsApp & UPI (GooglePay / PhonePe / Paytm)</option>
+                  <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                  <option value="Bank Transfer">Direct Artisan Bank Transfer</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="cNotes">Custom Clay Crafting Notes / Gift Instructions</label>
+                <textarea id="cNotes" name="customNotes" rows="2" placeholder="Any special requests or packaging instructions..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" id="submit-order-btn" class="btn btn-primary btn-block">
+                <span>Confirm Order & Send to shri67ram890@gmail.com</span> →
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Order Summary Card -->
+        <div style="background: var(--surface-alt); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light); position: sticky; top: 90px;">
+          <h3 style="font-size: 1.2rem; color: var(--terracotta-900); margin-bottom: 1rem;">2. Order Summary</h3>
+          
+          <div id="checkout-cart-items-display" style="max-height: 280px; overflow-y: auto; margin-bottom: 1.25rem;">
+            <!-- Rendered by script -->
+          </div>
+
+          <div style="border-top: 1px solid var(--border-light); padding-top: 1rem;">
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <strong id="page-subtotal-val">₹0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Pan-India Delivery:</span>
+              <span id="page-shipping-val">Calculated</span>
+            </div>
+            <div class="summary-row total-row" style="font-size: 1.25rem; font-weight: 800; color: var(--terracotta-900); margin-top: 0.5rem;">
+              <span>Grand Total:</span>
+              <strong id="page-total-val" style="color: var(--terracotta-700);">₹0</strong>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; background: #ffffff; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); font-size: 0.85rem; color: var(--text-muted);">
+            <div style="margin-bottom: 0.4rem; color: var(--terracotta-900); font-weight: 700;">Artisan Guarantee</div>
+            <p>Every piece is carefully inspect-packed with triple-cushion wrapping. Orders confirmed via WhatsApp before dispatch.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Success & Reminder Modal -->
+  <div class="modal-wrapper" id="order-success-modal">
+    <div class="modal-card">
+      <div class="order-success-card">
+        <div class="success-icon-badge">✓</div>
+        <h3 data-i18n="orderSuccessTitle">Order Placed Successfully!</h3>
+        <div class="order-id-tag" id="success-order-id">Order ID: #SAC-89214</div>
+
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Your order has been recorded. Full details have been forwarded to <strong>thuseyanth.ats@gmail.com</strong>.
+        </p>
+
+        <div class="email-dispatched-box" id="success-email-status"></div>
+
+        <div style="background: var(--sand-100); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem; text-align: left;">
+          <h4 style="font-size: 0.95rem; color: var(--terracotta-900); margin-bottom: 0.4rem;">📅 Delivery Tracking & Reminder</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Download the calendar reminder (.ics) so your device alerts you when your handcrafted terracotta shipment is due.
+          </p>
+          <button class="btn btn-outline btn-sm" onclick="downloadOrderReminder()">
+            📅 <span>Add Delivery Reminder to Calendar</span>
+          </button>
+        </div>
+
+        <div class="success-action-buttons">
+          <a id="success-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp">
+            <span>💬</span> <span>Open Order on WhatsApp</span>
+          </a>
+          <button class="btn btn-light" onclick="printOrderInvoice()">
+            <span>🖨️</span> <span>Print / Save Receipt</span>
+          </button>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <a href="index.html" class="btn btn-primary btn-sm">Return to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title"><span>🏺</span> Your Cart</h3>
+      <button class="drawer-close-btn" onclick="closeCartDrawer()">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-items"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div id="cart-drawer-totals"></div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img class="footer-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <h4>Shri's Art &amp; Culture</h4>
+        <p>Handmade terracotta products from Tiruchirappalli, Tamil Nadu.</p>
+        <p style="color: var(--terracotta-400); font-size: 0.85rem;">
+          📧 Order Dispatch: shri67ram890@gmail.com
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-list">
+          <span>📍 5 PNB Colony, Bikshandarkovil, No 1 Tollgate, Tiruchirappalli - 621216</span>
+          <span>📞 +91 8072301783, +91 9944918875</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shri's Art &amp; Culture. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= AI ARTISAN CHATBOT WIDGET (LEFT CORNER CIRCULAR ICON) ================= -->
+  <button class="ai-chat-trigger-btn" onclick="toggleAIChat()" aria-label="Open AI Artisan Assistant">
+    <span>🏺</span>
+    <span class="ai-chat-badge-indicator">AI</span>
+    <span class="ai-chat-tooltip">Ask Artisan AI 🏺</span>
+  </button>
+
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <div class="ai-chat-avatar">🏺</div>
+        <div class="ai-chat-title">
+          <h4>Shri Artisan AI</h4>
+          <small>Online • Terracotta Specialist</small>
+        </div>
+      </div>
+      <button class="ai-chat-close-btn" onclick="closeAIChat()" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="ai-chat-messages" id="ai-chat-messages"></div>
+    <div class="chat-chips-row" id="ai-chat-chips-row"></div>
+
+    <form class="ai-chat-input-bar" onsubmit="event.preventDefault(); handleChatSubmit();">
+      <input type="text" id="ai-chat-input" placeholder="Ask about payment, delivery, order..." autocomplete="off">
+      <button type="submit" class="ai-chat-send-btn" aria-label="Send message">➤</button>
+    </form>
+  </div>
+
+  <script>
+    function renderCheckoutPageCart() {
+      const displayEl = document.getElementById('checkout-cart-items-display');
+      if (!displayEl) return;
+
+      if (cart.length === 0) {
+        displayEl.innerHTML = `
+          <div style="text-align: center; padding: 2rem 1rem; color: var(--text-muted);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🏺</div>
+            <p>Your cart is empty.</p>
+            <a href="products.html" class="btn btn-outline btn-sm" style="margin-top: 0.8rem;">Browse Products</a>
+          </div>
+        `;
+        document.getElementById('page-subtotal-val').textContent = '₹0';
+        document.getElementById('page-shipping-val').textContent = '₹0';
+        document.getElementById('page-total-val').textContent = '₹0';
+        const submitBtn = document.getElementById('submit-order-btn');
+        if (submitBtn) submitBtn.disabled = true;
+        return;
+      }
+
+      displayEl.innerHTML = cart.map(item => `
+        <div style="display: flex; gap: 0.8rem; align-items: center; padding: 0.6rem 0; border-bottom: 1px dashed var(--border-light);">
+          <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 6px; object-fit: cover;">
+          <div style="flex-grow: 1;">
+            <div style="font-size: 0.9rem; font-weight: 700; color: var(--terracotta-900);">${item.name}</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">₹${item.price} × ${item.quantity}</div>
+          </div>
+          <div style="font-weight: 700; color: var(--terracotta-700);">₹${item.price * item.quantity}</div>
+        </div>
+      `).join('');
+
+      const subtotal = getCartSubtotal();
+      const shipping = getShippingFee(subtotal);
+      const total = subtotal + shipping;
+
+      document.getElementById('page-subtotal-val').textContent = `₹${subtotal}`;
+      document.getElementById('page-shipping-val').textContent = shipping === 0 ? 'FREE' : `₹${shipping}`;
+      document.getElementById('page-total-val').textContent = `₹${total}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutPageCart();
+      // Listen to cart updates
+      const origSaveCart = window.saveCart;
+      window.saveCart = function() {
+        origSaveCart();
+        renderCheckoutPageCart();
+      };
+    });
+  </script>
+</body>
+</html>
