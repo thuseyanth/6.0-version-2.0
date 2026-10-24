@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Terracotta Collection | Shri's Art & Culture</title>
+  <meta name="description" content="Browse authentic handcrafted Tamil terracotta horses, idols, animal planters, clay jewellery and earthen lamps.">
+  <link rel="icon" type="image/png" href="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="announcement-text">
+        <span class="badge">Handmade</span>
+        <span data-i18n="announcement">Handmade with care • Pan-India delivery options • WhatsApp for custom orders</span>
+      </div>
+      <div class="top-bar-actions">
+        <a href="tel:+918072301783" class="quick-contact-link">📞 +91 8072301783</a>
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en" onclick="setlanguage('en')">English</button>
+          <button class="lang-btn" data-lang="ta" onclick="setlanguage('ta')">தமிழ்</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html">
+        <img class="brand-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <div class="brand-text">
+          <strong>Shri's Art &amp; Culture</strong>
+          <small data-i18n="brandSubtitle">Handmade Terracotta Products</small>
+        </div>
+      </a>
+
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input id="header-search-input" name="q" type="search" placeholder="Search horses, planters, idols, diyas..." aria-label="Search products" autocomplete="off">
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+        <a href="products.html" class="nav-link active" data-i18n="shop">Shop Collection</a>
+        <a href="index.html#about" class="nav-link" data-i18n="ourStoryBtn">Our Story</a>
+        <a href="checkout.html" class="nav-link">Checkout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button-trigger" onclick="openCartDrawer()" aria-label="View Shopping Cart">
+          <span>🛒</span>
+          <span data-i18n="cart">Cart</span>
+          <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow" data-i18n="heritageEyebrow">HANDCRAFTED CATALOG</span>
+          <h1 class="section-title" data-i18n="shop">Terracotta Collection</h1>
+          <p class="section-subtitle">Natural earthen clay creations hand-thrown and kiln-fired by Tamil artisans</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-category="all" data-i18n="allCategories">All Products</button>
+          <button class="filter-btn" data-category="idols" data-i18n="catIdols">Idols & Horses</button>
+          <button class="filter-btn" data-category="planters" data-i18n="catPlanters">Planters</button>
+          <button class="filter-btn" data-category="jewellery" data-i18n="catJewellery">Jewellery</button>
+          <button class="filter-btn" data-category="decor" data-i18n="catDecor">Home Decor</button>
+        </div>
+      </div>
+
+      <!-- Catalog Grid -->
+      <div class="product-grid" id="products-grid-container">
+        <!-- Products populated via js/app.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img class="footer-logo-img" src="C:/Users/acer/.gemini/antigravity/brain/61c0eeeb-eb5d-415f-869a-cc0bc96bb6e0/.user_uploaded/media_1792504446881_040d15c0.png" alt="Shri's Art & Culture Logo" onerror="this.src='image/logo.png'">
+        <h4>Shri's Art &amp; Culture</h4>
+        <p>Celebrating Tamil craft heritage through handmade terracotta pottery, sacred figurines, and sustainable lifestyle decor.</p>
+        <p style="color: var(--terracotta-400); font-size: 0.85rem;">
+          📧 Orders delivered to: shri67ram890@gmail.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="quickLinks">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="products.html" data-i18n="shop">Shop All Collections</a></li>
+          <li><a href="checkout.html">Cart & Checkout</a></li>
+          <li><a href="index.html#about" data-i18n="ourStoryBtn">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="contactLocation">Contact & Location</h5>
+        <div class="footer-contact-list">
+          <span>📍 5 PNB Colony, Bikshandarkovil, No 1 Tollgate</span>
+          <span>🏛️ Tiruchirappalli, Tamil Nadu - 621216</span>
+          <span>📞 +91 8072301783, +91 9944918875</span>
+          <span>✉️ shri67ram890@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shri's Art &amp; Culture. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title"><span>🏺</span> <span data-i18n="cartTitle">Your Shopping Cart</span></h3>
+      <button class="drawer-close-btn" onclick="closeCartDrawer()">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-items"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div id="cart-drawer-totals"></div>
+      <div class="cart-actions-column">
+        <button id="cart-drawer-checkout-btn" class="btn btn-primary btn-block" onclick="openCheckoutModal()" data-i18n="checkoutBtn">
+          Proceed to Checkout →
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-wrapper" id="checkout-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 data-i18n="checkoutTitle">Place Your Order</h3>
+          <p data-i18n="checkoutSubtitle">Order details will be sent to thuseyanth.ats@gmail.com</p>
+        </div>
+        <button class="modal-close-icon" onclick="closeCheckoutModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="notification-recipient-pill">
+          <span>📨</span>
+          <div>Order copy sent to artisan: <strong>thuseyanth.ats@gmail.com</strong></div>
+        </div>
+        <div class="checkout-order-review">
+          <h4><span>Order Items Summary</span> <span id="checkout-total-val">₹0</span></h4>
+          <div class="checkout-items-mini" id="checkout-items-mini"></div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; border-top: 1px solid var(--sand-300); padding-top: 0.4rem;">
+            <span>Subtotal: <b id="checkout-subtotal-val">₹0</b></span>
+            <span>Shipping: <b id="checkout-shipping-val">₹0</b></span>
+          </div>
+        </div>
+        <form id="checkout-order-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="customerName"><span data-i18n="fullName">Full Name</span> *</label>
+              <input type="text" id="customerName" name="customerName" required placeholder="e.g. Anandha Kumar">
+            </div>
+            <div class="form-group">
+              <label for="customerPhone"><span data-i18n="phone">Mobile Phone Number</span> *</label>
+              <input type="tel" id="customerPhone" name="customerPhone" required placeholder="e.g. 9876543210">
+            </div>
+            <div class="form-group">
+              <label for="customerWhatsapp"><span data-i18n="whatsapp">WhatsApp Number</span></label>
+              <input type="tel" id="customerWhatsapp" name="customerWhatsapp" placeholder="e.g. 9876543210">
+            </div>
+            <div class="form-group">
+              <label for="customerEmail"><span data-i18n="email">Email Address</span> *</label>
+              <input type="email" id="customerEmail" name="customerEmail" required placeholder="e.g. customer@example.com">
+            </div>
+            <div class="form-group full-width">
+              <label for="address"><span data-i18n="address">Delivery Street Address</span> *</label>
+              <textarea id="address" name="address" rows="2" required placeholder="Full delivery address..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="city"><span data-i18n="city">City / Town</span> *</label>
+              <input type="text" id="city" name="city" required placeholder="Tiruchirappalli">
+            </div>
+            <div class="form-group">
+              <label for="state"><span data-i18n="state">State</span> *</label>
+              <input type="text" id="state" name="state" required value="Tamil Nadu">
+            </div>
+            <div class="form-group">
+              <label for="pincode"><span data-i18n="pincode">PIN Code</span> *</label>
+              <input type="text" id="pincode" name="pincode" required placeholder="621216">
+            </div>
+            <div class="form-group">
+              <label for="paymentMode"><span data-i18n="paymentMode">Payment Method</span> *</label>
+              <select id="paymentMode" name="paymentMode" required>
+                <option value="WhatsApp & UPI">WhatsApp & UPI (GooglePay / PhonePe - Recommended)</option>
+                <option value="Cash on Delivery">Cash on Delivery (COD)</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="customNotes"><span data-i18n="notes">Custom Notes / Gift Message</span></label>
+              <textarea id="customNotes" name="customNotes" rows="2" placeholder="Custom design or notes..."></textarea>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" id="submit-order-btn" class="btn btn-primary btn-block">
+              <span data-i18n="confirmOrderBtn">Submit Order & Send Details</span> →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success & Reminder Modal -->
+  <div class="modal-wrapper" id="order-success-modal">
+    <div class="modal-card">
+      <div class="order-success-card">
+        <div class="success-icon-badge">✓</div>
+        <h3 data-i18n="orderSuccessTitle">Order Placed Successfully!</h3>
+        <div class="order-id-tag" id="success-order-id">Order ID: #SAC-89214</div>
+        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="orderSuccessMsg">
+          Details sent to thuseyanth.ats@gmail.com.
+        </p>
+        <div class="email-dispatched-box" id="success-email-status"></div>
+        <div style="background: var(--sand-100); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem; text-align: left;">
+          <h4 style="font-size: 0.95rem; color: var(--terracotta-900); margin-bottom: 0.4rem;">📅 Delivery Tracking & Reminder</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Download your calendar event to get reminder alerts when the shipment arrives.
+          </p>
+          <button class="btn btn-outline btn-sm" onclick="downloadOrderReminder()">
+            📅 <span data-i18n="reminderText">Add Delivery Reminder to Calendar</span>
+          </button>
+        </div>
+        <div class="success-action-buttons">
+          <a id="success-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp">
+            <span>💬</span> <span data-i18n="whatsappDirect">Open on WhatsApp</span>
+          </a>
+          <button class="btn btn-light" onclick="printOrderInvoice()">
+            <span>🖨️</span> <span data-i18n="downloadInvoice">Print Receipt</span>
+          </button>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <button class="btn btn-primary btn-sm" onclick="closeSuccessModal()">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-wrapper" id="quick-view-modal">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem;">Product Details</h3>
+        <button class="modal-close-icon" onclick="closeQuickViewModal()">✕</button>
+      </div>
+      <div class="modal-body" id="quick-view-modal-body"></div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/918072301783" class="floating-whatsapp-widget" target="_blank" rel="noopener">💬</a>
+
+  <!-- ================= AI ARTISAN CHATBOT WIDGET (LEFT CORNER CIRCULAR ICON) ================= -->
+  <button class="ai-chat-trigger-btn" onclick="toggleAIChat()" aria-label="Open AI Artisan Assistant">
+    <span>🏺</span>
+    <span class="ai-chat-badge-indicator">AI</span>
+    <span class="ai-chat-tooltip">Ask Artisan AI 🏺</span>
+  </button>
+
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <div class="ai-chat-avatar">🏺</div>
+        <div class="ai-chat-title">
+          <h4>Shri Artisan AI</h4>
+          <small>Online • Terracotta Specialist</small>
+        </div>
+      </div>
+      <button class="ai-chat-close-btn" onclick="closeAIChat()" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="ai-chat-messages" id="ai-chat-messages"></div>
+    <div class="chat-chips-row" id="ai-chat-chips-row"></div>
+
+    <form class="ai-chat-input-bar" onsubmit="event.preventDefault(); handleChatSubmit();">
+      <input type="text" id="ai-chat-input" placeholder="Ask about products, gifts, care..." autocomplete="off">
+      <button type="submit" class="ai-chat-send-btn" aria-label="Send message">➤</button>
+    </form>
+  </div>
+
+  <script>
+    // Handle URL query parameters for search on products page
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const q = urlParams.get('q');
+      if (q) {
+        const searchInput = document.getElementById('header-search-input');
+        if (searchInput) searchInput.value = q;
+        handleSearch(q);
+      }
+    });
+  </script>
+</body>
+</html>
